@@ -1,0 +1,18 @@
+<mat-card class="chat-box">
+  <mat-card *ngIf="chatRoom && userName" class="chat-box__room-info">
+    <mat-label>Chat with: {{chatRoom}}</mat-label>
+    <button mat-raised-button (click)="clearChat()" class="chat-box__clear-button">Clear</button>
+  </mat-card>
+  <mat-list *ngIf="messageHistory.length > 0 && chatRoom && userName" class="chat-box__message-list">
+    <div *ngFor="let message of messageHistory">
+      <mat-card [ngClass]="setChatMsgClass(message)">
+        <span *ngIf="!message.sentByFriend;">{{message.user[0]}}: </span>
+        <mat-list-item>{{message.message}}</mat-list-item>
+        <span *ngIf="message.sentByFriend;"> :{{message.user[0]}}</span>
+      </mat-card>
+    </div>
+  </mat-list>
+</mat-card>
+<mat-card class="chat-box__input-container">
+  <app-message-input (onMessageSent)="addMessageToChatBox($event)" (onUserNameSet)="setUserName($event)" [friendSelected]="friendSelected"></app-message-input>
+</mat-card>

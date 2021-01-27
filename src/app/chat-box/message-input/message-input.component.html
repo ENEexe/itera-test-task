@@ -1,0 +1,11 @@
+<div class="input__form-container">
+  <mat-form-field class="input__user-name">
+    <mat-label>User name</mat-label>
+    <input matInput type="text" name="userName" [value]="userName" [(ngModel)]="userName" (change)="setUserName(userName)">
+  </mat-form-field>
+  <mat-form-field class="input__message">
+    <mat-label>Message</mat-label>
+    <input matInput type="text" name="message" [value]="message" [(ngModel)]="message" (keyup)="sendMessageOnEnterPress(userName, message, $event)">
+  </mat-form-field>
+  <button mat-raised-button (click)="sendMessage(userName, message)" class="input__submit-button">Send</button>
+</div>

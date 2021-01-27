@@ -1,0 +1,13 @@
+.chat {
+  margin: 15px;
+  display: flex;
+  width: fit-content;
+  background-color: cadetblue;
+
+  &__friend-list {
+    width: 200px;
+    height: fit-content;
+    margin-left: 10px;
+    background-color: bisque;
+  }
+}

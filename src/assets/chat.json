@@ -1,0 +1,42 @@
+[
+  {
+    "key": "IgorAlexMessages",
+    "messages": [
+      {
+        "user":"Igor",
+        "message":"Hello ",
+        "sentByFriend": false
+      },
+      {
+        "user":"Alex",
+        "message":"Hi",
+        "sentByFriend": true
+      },
+      {
+        "user":"Igor",
+        "message":"How are you ?",
+        "sentByFriend": false
+      },
+      {
+        "user":"Alex",
+        "message":"Good, thanks",
+        "sentByFriend": true
+      }
+    ]
+  },
+  {
+    "key": "IgorSamMessages",
+    "messages": [
+      {
+        "user":"Igor",
+        "message":"Hey Sam",
+        "sentByFriend": false
+      },
+      {
+        "user":"Sam",
+        "message":"What's up ?",
+        "sentByFriend": true
+      }
+    ]
+  }
+]
